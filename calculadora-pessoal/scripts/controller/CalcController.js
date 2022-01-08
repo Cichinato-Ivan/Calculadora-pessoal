@@ -10,8 +10,14 @@ class CalcController {
 
     initialize(){
 
+        let displayCalcEl = document.querySelector("#display");
+        let dateEl = document.querySelector("#data");
+        let timeEl = document.querySelector("#hora");
 
-
+        displayCalcEl.innerHTML = "4567";
+        dateEl.innerHTML = "07/01/2022";
+        timeEl.innerHTML = "00:00";
+        
     }
 
     get displayCalc(){
@@ -20,9 +26,9 @@ class CalcController {
 
     }
 
-    set displayCalc(valor){
+    set displayCalc(value){
 
-        this._displayCalc = valor;
+        this._displayCalc = value;
 
     }
 
@@ -32,9 +38,9 @@ class CalcController {
 
     }
 
-    set currentDate(valor){
+    set currentDate(value){
 
-        this._currentDate = valor;
+        this._currentDate = value;
 
     }
 
