@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+    <script>
+        /*
+        // true && true && false = false -> se há apenas uma condição falsa com o operador && (E) o resultado sempre será falso
+        if (2 == 2 && 3 >= 1 && 'a' == 'b') {
+            document.write('Verdadeiro')
+        } else {
+            document.write('Falso')
+        }
+
+        document.write('<hr />')
+
+        // true || true || false = false -> se há apenas uma condição verdadeira com o operador || (OU) o resultado sempre será verdadeiro 
+        if (2 == 2 || 3 >= 1 || 'a' == 'b') {
+            document.write('Verdadeiro')
+        } else {
+            document.write('Falso')
+        }
+
+        document.write('<hr />')
+
+        if (!(5 >= 2)) {
+            document.write('Verdadeiro')
+        } else {
+            document.write('Falso')
+        }
+        */
+       
+
+        var nota = prompt('Digite a nota do aluno:')
+        var faltas = prompt('Digite o número de faltas do aluno:')
+
+        var media = 7
+        var faltas_maximas = 15
+
+        // if (nota >= media && faltas <= faltas_maximas) {
+        //     document.write('Aprovado')
+        // } else {
+        //     document.write('Reprovado')
+        // }
+
+        // Operador Ternário
+        var resultado = (nota >= media && faltas <= faltas_maximas) ? 'Aprovado' : 'Reprovado'
+        document.write(resultado)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
