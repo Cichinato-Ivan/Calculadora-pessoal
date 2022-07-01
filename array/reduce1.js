@@ -1,21 +1,14 @@
-Array.prototype.filter2 = function(callback) {
-    const newArray = []
-    for (let i = 0; i < this.length; i++) {
-       if(callback(this[i], i, this)) {
-            newArray.push(this[i])
-       }
-    }
-    return newArray
-}
-
-const produtos = [
-    {nome: 'Notebook', preco: 2499, fragil: true},
-    {nome: 'iPad PRO', preco: 4199, fragil: true},
-    {nome: 'Copo de Vidro', preco: 12.49, fragil: true},
-    {nome: 'Copo de Plástico', preco: 18.99, fragil: false}
+const alunos = [
+    {nome: 'João', nota: 7.3, bolsista: true},
+    {nome: 'Maria', nota: 9.2, bolsista: true},
+    {nome: 'Pedro', nota: 9.8, bolsista: false},
+    {nome: 'Ana', nota: 8.7, bolsista: true},
 ]
 
-const caro = produto => produto.preco >= 500
-const fragil = produto => produto.fragil
+console.log(alunos.map(a => a.nota))
+const resultado = alunos.map(a => a.nota).reduce(function(acumulador, atual) {
+    console.log(acumulador, atual)
+    return acumulador + atual
+})
 
-console.log(produtos.filter2(caro).filter2(fragil));
+console.log(resultado)
