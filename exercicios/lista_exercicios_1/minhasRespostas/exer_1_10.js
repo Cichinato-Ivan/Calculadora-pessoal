@@ -114,3 +114,66 @@ function bhaskara (ax2, bx, c) {
 
 console.log(bhaskara(1, 3, 2))
 console.log(bhaskara(3, 1, 2))
+
+// ____________________________________________________
+/*
+08) Pedro joga N jogos de basquete por temporada. Para saber como está ele está progredindo, ele mantém
+registro de todos os as pontuações feitas por jogo. Após cada jogo ele anota no novo valor e confere se o
+mesmo é maior ou menor que seu melhor e pior desempenho. Dada uma lista string = “pontuação1 pontuação2
+pontuação3 etc..”, escreva uma função que ao recebê-la irá comparar os valores um a um e irá retornar um
+vetor com o número de vezes que ele bateu seu recorde de maior número de pontos e quando fez seu pior
+jogo. (Número do pior jogo).
+*/
+
+let stringPontuacoes = "30, 40, 20, 4, 51, 25, 42, 38, 56, 0"
+ 
+ 
+function avaliaPontuacoes (stringPontuacoes) {
+    let pontuacoes = stringPontuacoes.split(", ")
+    let qtdQuebraDeRecords = 0
+    let piorJogo = 1
+    let maiorPontuacao = pontuacoes[0]
+    let menorPontuacao = pontuacoes[0]
+
+    for (let i = 1; i < pontuacoes.length; i++) {
+        if(pontuacoes[i] > maiorPontuacao) {
+            maiorPontuacao = pontuacoes[i]
+            qtdQuebraDeRecords++
+        }else if (pontuacoes[i] < menorPontuacao) {
+            menorPontuacao = pontuacoes[i]
+            piorJogo = i+1;
+        }
+    }
+    return [qtdQuebraDeRecords, piorJogo]
+}
+ 
+console.log(avaliaPontuacoes(stringPontuacoes))
+
+// _______________________________________________
+/*
+09) Construa uma função para um sistema de notas de uma instituição que possui a seguinte política de
+classificação: Todo aluno recebe uma nota de 0 a 100. Alunos com nota abaixo de 40 são reprovados. As notas
+possuem a seguinte regra de arredondamento: Se a diferença entre a nota e o próximo múltiplo de 5 for menor
+que 3, arredondar a nota para esse próximo múltiplo de 5. Se a nota for abaixo de 38, não é feito nenhum
+arredondamento pois esta nota resulta na reprovação do aluno. Por exemplo, a nota 84 será arredondada para
+85, mas a nota 29 não será arredondada por ser abaixo de 40 e não ser possível arredondamento eficiente, ou
+seja, que evite a reprovação do aluno. No caso de a nota ser 38, o arredondamento é possível pois atingirá 40
+e o aluno será aprovado
+*/
+
+const alunos = [
+    {noem: "Elsa", nota: 61},
+    {noem: "Hans", nota: 73},
+    {noem: "Khaleesi", nota: 44},
+    {noem: "Arya", nota: 17},
+    {noem: "Valkyrie", nota: 24},
+    {noem: "Hawkeye", nota: 28},
+    {noem: "Damien", nota: 68},
+    {noem: "Lolita", nota: 78},
+    {noem: "Anakin", nota: 49},
+    {noem: "Kylo", nota: 63},
+    {noem: "Draco", nota: 57},
+    {noem: "Hermione", nota: 51},
+    {noem: "Ariel", nota: 79},
+]
+
