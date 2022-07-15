@@ -161,19 +161,25 @@ seja, que evite a reprovação do aluno. No caso de a nota ser 38, o arredondame
 e o aluno será aprovado
 */
 
-const alunos = [
-    {noem: "Elsa", nota: 61},
-    {noem: "Hans", nota: 73},
-    {noem: "Khaleesi", nota: 44},
-    {noem: "Arya", nota: 17},
-    {noem: "Valkyrie", nota: 24},
-    {noem: "Hawkeye", nota: 28},
-    {noem: "Damien", nota: 68},
-    {noem: "Lolita", nota: 78},
-    {noem: "Anakin", nota: 49},
-    {noem: "Kylo", nota: 63},
-    {noem: "Draco", nota: 57},
-    {noem: "Hermione", nota: 51},
-    {noem: "Ariel", nota: 79},
-]
+function classificaAluno(nota) {
+    let notaCorrigida = arredondar(nota)
+    if (notaCorrigida >= 40) {
+        console.log(`Aprovado com nota ${notaCorrigida}`);
+    } else {
+        console.log(`Reprovado com nota ${notaCorrigida}`);
+    }
+}
 
+function arredondar (nota) {
+    if (nota % 5 > 2) {
+        return nota + (5 - (nota % 5))
+    } else {
+        return nota
+    }
+}
+
+classificaAluno(100)
+classificaAluno(30)
+classificaAluno(38)
+classificaAluno(88)
+classificaAluno(61)
