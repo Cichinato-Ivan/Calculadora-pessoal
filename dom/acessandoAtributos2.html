@@ -17,7 +17,18 @@
         </ul>
     </div>
     <script>
-        // ...
+
+        const lista = document.querySelector('div ul[destino="escritorio"]')
+        console.log('Elemento "ul"...................')
+        console.log('childNodes', lista.childNodes)
+        console.log('destino', lista.destino)
+        console.log('getAttribute', lista.getAttribute('destino'))
+        console.log('hasAttribute', lista.hasAttribute('destino'))
+        lista.setAttribute('destino', 'empresa')
+        lista.setAttribute('status', 'aberto')
+
+        // exercicio bugado
+
     </script>
 </body>
 
