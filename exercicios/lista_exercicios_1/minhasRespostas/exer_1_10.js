@@ -183,3 +183,22 @@ classificaAluno(30)
 classificaAluno(38)
 classificaAluno(88)
 classificaAluno(61)
+
+/* _______________________________________________
+
+10) ) Crie uma função que verifica se um número inteiro passado como parêmetro é divisível 
+por 3 e retorne true
+ou false.
+
+*/
+
+function multiploX3(number, x) {
+
+    if (number % x == 0) {
+        console.log(true)
+    } else {
+        console.log(false)
+    }
+}
+
+multiploX3(13, 3)
