@@ -1,4 +1,4 @@
-// Exercício 1 ________________________
+/* Exercício 1 ________________________
 
 const { functions } = require("lodash")
 
@@ -23,7 +23,7 @@ calc(3, 2)
     ao tamanho de seus lados. (Neste exemplo deve-se abstrair as condições matemáticas de existência de um
     triângulo).
 
-*/
+*
 
 function triangulo(l1, l2, l3) {
     if (l1 === l2 && l2 === l3) {
@@ -68,7 +68,7 @@ console.log(module(5, 2))
 // __________________________________________________________________
 /* 05) Lidar com números em JavaScript pode dar muita dor de cabeça. Você já viu o que acontece quando faz o seguinte comando no console: console.log(0.1 + 0.2); O resultado será: 0.30000000000000004. Outra coisa
 importante de observar, é o fato que o ponto é utilizado no lugar da vírgula e vice versa. Com isso, vamos fazer um exercício simples para mostrar dinheiro sempre da forma correta. Desenvolva uma função JavaScript para que ela receba um valor como 0.30000000000000004 e retorne R$0,30 (observe a vírgula e o ponto)
-*/
+*
 
 function money(valorDecimal) { // v = valor
    valorEmReais = `R$ ${valorDecimal.toFixed(2).toString().replace("." , ",")}`
@@ -80,7 +80,7 @@ money(0.4 + 1.2)
 /*
 06) Elabore duas funções que recebem três parâmetros: capital inicial, taxa de juros e tempo de aplicação. A primeira função retornará o montante da aplicação financeira sob o regime de juros simples e a segunda
 retornará o valor da aplicação sob o regime de juros compostos.
-*/
+*
 
 function jurosSimples (capitalInicial, taxa, tempo) {
     return capitalInicial + (capitalInicial * taxa * tempo)
@@ -98,7 +98,7 @@ console.log(jurosCompostos(100, 10/100, 2));
 07) Uma das vantagens da programação é a automatização de tarefas que não gostamos de realizar. Dito isto,
 elabore uma função cujo objetivo é resolver a fórmula de Bhaskara. Para isso, sua função deve receber três
 parâmetros, “ax2”, “bx” e “c”, de tal modo que na equação: 3x² - 5x + 12 os valores seriam respectivamente: 3, -5, 12. Como retorno deve ser passado um vetor que tem 2 valores um para cada possível resultado, mesmo que os resultados sejam iguais. Caso o delta seja negativo, retorne, ao invés do vetor, um string com a frase: “Delta é negativo”.
-*/
+*
 function bhaskara (ax2, bx, c) {
     let resultados = []
     let delta = (bx ** 2) - (4 * ax2 * c)
@@ -123,7 +123,7 @@ mesmo é maior ou menor que seu melhor e pior desempenho. Dada uma lista string 
 pontuação3 etc..”, escreva uma função que ao recebê-la irá comparar os valores um a um e irá retornar um
 vetor com o número de vezes que ele bateu seu recorde de maior número de pontos e quando fez seu pior
 jogo. (Número do pior jogo).
-*/
+*
 
 let stringPontuacoes = "30, 40, 20, 4, 51, 25, 42, 38, 56, 0"
  
@@ -159,7 +159,7 @@ arredondamento pois esta nota resulta na reprovação do aluno. Por exemplo, a n
 85, mas a nota 29 não será arredondada por ser abaixo de 40 e não ser possível arredondamento eficiente, ou
 seja, que evite a reprovação do aluno. No caso de a nota ser 38, o arredondamento é possível pois atingirá 40
 e o aluno será aprovado
-*/
+*
 
 function classificaAluno(nota) {
     let notaCorrigida = arredondar(nota)
@@ -190,7 +190,7 @@ classificaAluno(61)
 por 3 e retorne true
 ou false.
 
-*/
+*
 
 function multiploX3(number, x) {
 
@@ -202,3 +202,49 @@ function multiploX3(number, x) {
 }
 
 multiploX3(13, 3)
+
+ _______________________________________________
+
+11) As regras para o cálculo dos anos bissextos são as seguintes:
+    De 4 em 4 anos é ano bissexto;
+    De 100 em 100 anos não é ano bissexto;
+    De 400 em 400 anos é ano bissexto;
+    Prevalecem as últimas regras sobre as primeiras.
+    Partindo daí elabore uma função que recebe um ano e calcula se ele é ano bissexto, imprimindo no console a
+    mensagem e retornando true ou false.
+
+*
+
+function bissexto(ano) {
+    if (ano % 4 == 0 && ano % 100 != 0) {
+        console.log(true)
+    } else {
+        console.log(false)
+    }
+}
+
+bissexto(ano = 2028)
+
+_______________________________________________
+
+12) Faça um algoritmo que calcule o fatorial de um número.
+ 
+*
+
+let n = 5
+let result = n
+for (let i = 1; i < n; i++){
+    result *= i
+}
+
+console.log(result)
+
+_______________________________________________
+
+13) Crie um programa que exibe se um dia é dia útil, fim de semana ou dia inválido dado o número referente ao
+dia. Considere que domingo é o dia 1 e sábado é o dia 7. Utilize a estrutura Switch.
+*/
+
+function businessDay() {
+   
+}
