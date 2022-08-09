@@ -310,7 +310,7 @@ possui, além de carros hatch, sedans, motocicletas e caminhonetes. Utilizando u
 comprador queira o hatch, retorne: “Compra efetuada com sucesso”. Nas outras opções, retorne: “Tem certeza
 que não prefere este modelo?”. Caso seja especificado um modelo que não está disponível, retorne no console:
 “Não trabalhamos com este tipo de automóvel aqui”.
-*/
+
 
 function buyCar(models) {
     switch (models) {
@@ -333,3 +333,34 @@ buyCar('motocicleta')
 buyCar('camionete')
 buyCar('hatch')
 buyCar('barco')
+
+========================================================================
+
+16)Utilizando a estrutura do Switch faça um programa que simule uma calculadora básicaO programa recebe
+como parâmetros dois valores numéricos e uma string referente à operação e a realize com os valores
+numéricos na ordem que foram inseridos. Por exemplo: calculadora (2, ‘+’, 3). A função efetuará a soma de 2 e
+3. Dica: Os sinais das operações são: ‘+’. ‘-’, ‘*’ e ‘/’. Crie um caso default para operações inválidas.
+
+*/
+
+function calc(v1, operacao, v2) {
+    switch (operacao) {
+        case '+':
+            return v1 + v2
+        case '-':
+            return v1 - v2
+        case '*':
+            return v1 * v2
+        case '/':
+            return v1 / v2
+        default:
+            return 'Operação inválida'
+    }
+}
+
+console.log(calc(2, '+', 3));
+console.log(calc(2, '-', 3));
+console.log(calc(2, '*', 3));
+console.log(calc(2, '/', 3));
+console.log(calc(2, 'a', 3));
+
