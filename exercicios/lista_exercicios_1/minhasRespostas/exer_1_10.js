@@ -243,8 +243,93 @@ _______________________________________________
 
 13) Crie um programa que exibe se um dia é dia útil, fim de semana ou dia inválido dado o número referente ao
 dia. Considere que domingo é o dia 1 e sábado é o dia 7. Utilize a estrutura Switch.
+
+
+function businessDay(number) {
+   switch (number) {
+    case 1:
+        return "Fim de Semana!"
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+        return "Dia útil!"
+    case 7:
+        return "Fim de Semana!"
+    default:
+        return "Dia Inválido"
+   }
+}
+
+console.log(businessDay(1));
+console.log(businessDay(2));
+console.log(businessDay(3));
+console.log(businessDay(4));
+console.log(businessDay(5));
+console.log(businessDay(6));
+console.log(businessDay(7));
+console.log(businessDay('a'));
+
+
+====================================================================================
+
+
+14)Crie uma estrutura condicional switch que receba uma string com o nome de uma fruta e que possua três
+casos: Caso maçã, retorne no console: “Não vendemos esta fruta aqui”. Caso kiwi, retorne: “Estamos com
+escassez de kiwis”. Caso melancia, retorne: “Aqui está, são 3 reais o quilo”. Teste com estas três opções .Crie
+também um default, que retornará uma mensagem de erro no console.
+
+
+function quitanda(frutas) {
+    switch (frutas) {
+        case 'maçã':
+            console.log("Não vendemos Maçãs aqui");
+            break;
+        case 'kiwi':
+            console.log("Estamos com escassez de kiwis");
+            break;
+        case 'melancia':
+            console.log("Melancias por apenas R$3,00 o kg");
+            break;
+        default:
+            console.log("Erro, fruta inválida");
+            break;
+    }
+}
+
+quitanda('maçã')
+quitanda('kiwi')
+quitanda('melancia')
+quitanda('tilapia')
+
+=============================================================
+
+15)Um homem decidiu ir à uma revenda comprar um carro. Ele deseja comprar um carro hatch, e a revenda
+possui, além de carros hatch, sedans, motocicletas e caminhonetes. Utilizando uma estrutura switch, caso o
+comprador queira o hatch, retorne: “Compra efetuada com sucesso”. Nas outras opções, retorne: “Tem certeza
+que não prefere este modelo?”. Caso seja especificado um modelo que não está disponível, retorne no console:
+“Não trabalhamos com este tipo de automóvel aqui”.
 */
 
-function businessDay() {
-   
+function buyCar(models) {
+    switch (models) {
+        case 'hatch':
+            console.log('Compra efetuada com sucesso');
+            break;
+        case 'sedan':
+        case 'motocicleta':
+        case 'camionete':
+            console.log('Tem certeza que prefere este modelo?');
+            break;
+        default:
+            console.log('Não trabalhamos com este tipo de automóvel aqui');
+            break;
+    }
 }
+
+buyCar('sedan')
+buyCar('motocicleta')
+buyCar('camionete')
+buyCar('hatch')
+buyCar('barco')
