@@ -36,7 +36,7 @@ app.post('/formulario', (req, res) => {
     })
 })
 
-app.get('/parOuImpar:numero', (req, res) => {
+app.get('/parOuImpar', (req, res) => {
     // req.body
     // req.query
     // req.params
